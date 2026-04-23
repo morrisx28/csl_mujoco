@@ -83,7 +83,7 @@
     <worldbody>
         <body name="base_link" pos="0 0 0.6" childclass="bigreddog">
             <inertial pos="0.000561536 -1.45402e-05 -0.0238998" quat="0.000157389 0.707722 8.11149e-05 0.706491" mass="7.39" diaginertia="0.061 0.016 0.065" />
-            <!-- <freejoint /> -->
+            <freejoint />
             <geom mesh="base_link" material="red" class="visual"/>
             <geom mesh="base_up" material="dark_gray" class="visual"/>
             <geom mesh="switch" material="metal" class="visual"/>    

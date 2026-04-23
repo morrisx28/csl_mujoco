@@ -1,0 +1,110 @@
+<mujoco model="jason_dog">
+  <compiler angle="radian" meshdir="meshes"/>
+
+  <asset>
+    <mesh name="base_link" file="base_link.STL"/>
+    <mesh name="front_link" file="front_link.STL"/>
+    <mesh name="FR_hip_link" file="FR_hip_link.STL"/>
+    <mesh name="FR_thigh_link" file="FR_thigh_link.STL"/>
+    <mesh name="FR_calf_link" file="FR_calf_link.STL"/>
+    <mesh name="FL_hip_link" file="FL_hip_link.STL"/>
+    <mesh name="FL_thigh_link" file="FL_thigh_link.STL"/>
+    <mesh name="FL_calf_link" file="FL_calf_link.STL"/>
+    <mesh name="rear_link" file="rear_link.STL"/>
+    <mesh name="RR_hip_link" file="RR_hip_link.STL"/>
+    <mesh name="RR_thigh_link" file="RR_thigh_link.STL"/>
+    <mesh name="RR_calf_link" file="RR_calf_link.STL"/>
+    <mesh name="RL_hip_link" file="RL_hip_link.STL"/>
+    <mesh name="RL_thigh_link" file="RL_thigh_link.STL"/>
+    <mesh name="RL_calf_link" file="RL_calf_link.STL"/>
+  </asset>
+
+  <worldbody>
+    <geom pos="0 0 0" quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="base_link"/>
+    <geom pos="0 0 0" quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="base_link"/>
+    <body name="front_link" pos="0.064338 0 -0.040039">
+      <inertial pos="0.028726 -0.000635 0.020681" quat="-0.100005 0.659093 0.0944888 0.73937" mass="0.184615" diaginertia="0.000215546 0.000161191 0.000138519"/>
+      <joint name="front_joint" pos="0 0 0" axis="0 -1 0" range="-3.14 3.14"/>
+      <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="front_link"/>
+      <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="front_link"/>
+      <body name="FR_hip_link" pos="0.0602 -0.055 0.027">
+        <inertial pos="-0.0192 0 -0.012026" mass="0.0611356" diaginertia="1.75137e-05 1.7469e-05 1.3299e-05"/>
+        <joint name="FR_hip_joint" pos="0 0 0" axis="1 0 0" range="-3.14 3.14"/>
+        <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="FR_hip_link"/>
+        <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="FR_hip_link"/>
+        <body name="FR_thigh_link" pos="-0.019 -0.0192 -0.024">
+          <inertial pos="-0.001902 0.01935 -0.047685" quat="0.999877 3.08218e-06 -0.0156554 1.45037e-06" mass="0.0746776" diaginertia="6.21312e-05 5.19971e-05 2.17293e-05"/>
+          <joint name="FR_thigh_joint" pos="0 0 0" axis="0 -1 0" range="-3.14 3.14"/>
+          <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="FR_thigh_link"/>
+          <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="FR_thigh_link"/>
+          <body name="FR_calf_link" pos="-0.0002 -0.0002 -0.075">
+            <inertial pos="-0.001793 0.01936 -0.046374" quat="0.999892 0.000272135 -0.0146833 -3.0146e-05" mass="0.0410076" diaginertia="3.65346e-05 3.08291e-05 8.97842e-06"/>
+            <joint name="FR_calf_joint" pos="0 0 0" axis="0 -1 0" range="-3.14 3.14"/>
+            <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="FR_calf_link"/>
+            <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="FR_calf_link"/>
+          </body>
+        </body>
+      </body>
+      <body name="FL_hip_link" pos="0.0602 0.055 0.027">
+        <inertial pos="-0.019 0 -0.012026" mass="0.0611356" diaginertia="1.75137e-05 1.7469e-05 1.3299e-05"/>
+        <joint name="FL_hip_joint" pos="0 0 0" axis="1 0 0" range="-3.14 3.14"/>
+        <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="FL_hip_link"/>
+        <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="FL_hip_link"/>
+        <body name="FL_thigh_link" pos="-0.019 0.0192 -0.024">
+          <inertial pos="-0.001702 -0.01895 -0.047685" quat="0.999877 4.7206e-06 -0.0156553 7.39113e-08" mass="0.0746776" diaginertia="6.21312e-05 5.19971e-05 2.17293e-05"/>
+          <joint name="FL_thigh_joint" pos="0 0 0" axis="0 -1 0" range="-3.14 3.14"/>
+          <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="FL_thigh_link"/>
+          <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="FL_thigh_link"/>
+          <body name="FL_calf_link" pos="0 0.0004 -0.075">
+            <inertial pos="-0.001793 -0.01916 -0.046374" quat="0.999892 -0.000269928 -0.0146833 2.95777e-05" mass="0.0410076" diaginertia="3.65346e-05 3.08291e-05 8.97842e-06"/>
+            <joint name="FL_calf_joint" pos="0 0 0" axis="0 -1 0" range="-3.14 3.14"/>
+            <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="FL_calf_link"/>
+            <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="FL_calf_link"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="rear_link" pos="-0.060662 0 -0.040039">
+      <inertial pos="-0.028749 -0.000634 0.020823" quat="0.0960846 0.734098 -0.10009 0.664718" mass="0.184846" diaginertia="0.00021521 0.000160287 0.000138235"/>
+      <joint name="rear_joint" pos="0 0 0" axis="0 -1 0" range="-3.14 3.14"/>
+      <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="rear_link"/>
+      <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="rear_link"/>
+      <body name="RR_hip_link" pos="-0.06 -0.055 0.027">
+        <inertial pos="0.019 0 -0.012026" mass="0.0611356" diaginertia="1.75137e-05 1.7469e-05 1.3299e-05"/>
+        <joint name="RR_hip_joint" pos="0 0 0" axis="1 0 0" range="-3.14 3.14"/>
+        <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="RR_hip_link"/>
+        <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="RR_hip_link"/>
+        <body name="RR_thigh_link" pos="0.019 -0.0192 -0.024">
+          <inertial pos="0.001702 0.01915 -0.047685" quat="0.999877 -4.83591e-06 0.0156549 8.551e-07" mass="0.0746774" diaginertia="6.21313e-05 5.19972e-05 2.17293e-05"/>
+          <joint name="RR_thigh_joint" pos="0 0 0" axis="0 1 0" range="-3.14 3.14"/>
+          <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="RR_thigh_link"/>
+          <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="RR_thigh_link"/>
+          <body name="RR_calf_link" pos="0 -0.0002 -0.075">
+            <inertial pos="0.001793 0.01916 -0.046374" quat="0.999892 0.000270093 0.0146833 2.97583e-05" mass="0.0410076" diaginertia="3.65346e-05 3.08291e-05 8.97842e-06"/>
+            <joint name="RR_calf_joint" pos="0 0 0" axis="0 1 0" range="-3.14 3.14"/>
+            <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="RR_calf_link"/>
+            <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="RR_calf_link"/>
+          </body>
+        </body>
+      </body>
+      <body name="RL_hip_link" pos="-0.06 0.055 0.027">
+        <inertial pos="0.019 0 -0.012026" mass="0.0611356" diaginertia="1.75137e-05 1.7469e-05 1.3299e-05"/>
+        <joint name="RL_hip_joint" pos="0 0 0" axis="1 0 0" range="-3.14 3.14"/>
+        <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="RL_hip_link"/>
+        <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="RL_hip_link"/>
+        <body name="RL_thigh_link" pos="0.019 0.0192 -0.024">
+          <inertial pos="0.001702 -0.01915 -0.047685" quat="0.999877 -3.22752e-06 0.015655 1.47819e-06" mass="0.0746774" diaginertia="6.21313e-05 5.19972e-05 2.17293e-05"/>
+          <joint name="RL_thigh_joint" pos="0 0 0" axis="0 1 0" range="-3.14 3.14"/>
+          <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="RL_thigh_link"/>
+          <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="RL_thigh_link"/>
+          <body name="RL_calf_link" pos="0 0.0002 -0.075">
+            <inertial pos="0.001793 -0.01916 -0.046374" quat="0.999892 -0.000272139 0.0146833 -3.01495e-05" mass="0.0410076" diaginertia="3.65346e-05 3.08291e-05 8.97842e-06"/>
+            <joint name="RL_calf_joint" pos="0 0 0" axis="0 1 0" range="-3.14 3.14"/>
+            <geom quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.627451 0.627451 0.627451 1" mesh="RL_calf_link"/>
+            <geom quat="0.707107 0.707107 0 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="RL_calf_link"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
