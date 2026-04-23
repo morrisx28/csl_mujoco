@@ -80,7 +80,7 @@
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
-    
+
   </link>
   <joint
     name="AMR_FL_joint"
@@ -94,6 +94,11 @@
       link="AMR_FL_link" />
     <axis
       xyz="0 0 1" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="20"
+      velocity="10" />
   </joint>
   <link
     name="AMR_FLW_link">
@@ -144,6 +149,9 @@
       link="AMR_FLW_link" />
     <axis
       xyz="0 1 0" />
+    <limit
+      effort="20"
+      velocity="10" />
   </joint>
   <link
     name="AMR_FR_link">
@@ -175,7 +183,7 @@
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
-    
+
   </link>
   <joint
     name="AMR_FR_joint"
@@ -189,6 +197,11 @@
       link="AMR_FR_link" />
     <axis
       xyz="0 0 1" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="20"
+      velocity="10" />
   </joint>
   <link
     name="AMR_FRW_link">
@@ -239,6 +252,9 @@
       link="AMR_FRW_link" />
     <axis
       xyz="0 1 0" />
+    <limit
+      effort="20"
+      velocity="10" />
   </joint>
   <link
     name="AMR_RL_link">
@@ -270,7 +286,6 @@
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
-   
   </link>
   <joint
     name="AMR_RL_joint"
@@ -284,6 +299,11 @@
       link="AMR_RL_link" />
     <axis
       xyz="0 0 1" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="20"
+      velocity="10" />
   </joint>
   <link
     name="AMR_RLW_link">
@@ -315,7 +335,7 @@
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
-   <collision>
+    <collision>
       <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
       <geometry>
         <cylinder radius="0.052" length="0.075"/>
@@ -334,6 +354,9 @@
       link="AMR_RLW_link" />
     <axis
       xyz="0 1 0" />
+    <limit
+      effort="20"
+      velocity="10" />
   </joint>
   <link
     name="AMR_RR_link">
@@ -365,7 +388,7 @@
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
-    
+
   </link>
   <joint
     name="AMR_RR_joint"
@@ -379,6 +402,11 @@
       link="AMR_RR_link" />
     <axis
       xyz="0 0 1" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="20"
+      velocity="10" />
   </joint>
   <link
     name="AMR_RRW_link">
@@ -429,6 +457,9 @@
       link="AMR_RRW_link" />
     <axis
       xyz="0 1 0" />
+    <limit
+      effort="20"
+      velocity="10" />
   </joint>
   <link
     name="openarm_base_link">
@@ -588,6 +619,11 @@
       link="L_link1" />
     <axis
       xyz="0 -1 0" />
+    <limit
+      lower="-1.3962629999999998"
+      upper="3.490659"
+      effort="40"
+      velocity="16.754666" />
   </joint>
   <link
     name="L_link2">
@@ -619,7 +655,7 @@
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
-    
+
   </link>
   <joint
     name="L_2_joint"
@@ -633,6 +669,11 @@
       link="L_link2" />
     <axis
       xyz="1 0 0" />
+    <limit
+      effort="40"
+      lower="-0.17453267320510335"
+      upper="3.3161253267948965"
+      velocity="16.754666" />
   </joint>
   <link
     name="L_link3">
@@ -686,6 +727,11 @@
       link="L_link3" />
     <axis
       xyz="0 0 -1" />
+    <limit
+      effort="27"
+      lower="-1.570796"
+      upper="1.570796"
+      velocity="5.445426" />
   </joint>
   <link
     name="L_link4">
@@ -739,6 +785,11 @@
       link="L_link4" />
     <axis
       xyz="0 1 0" />
+    <limit
+      effort="27"
+      lower="-2.443461"
+      upper="0.0"
+      velocity="5.445426" />
   </joint>
   <link
     name="L_link5">
@@ -792,6 +843,11 @@
       link="L_link5" />
     <axis
       xyz="0 0 -1" />
+    <limit
+      effort="7"
+      lower="-1.570796"
+      upper="1.570796"
+      velocity="20.943946" />
   </joint>
   <link
     name="L_link6">
@@ -846,10 +902,10 @@
     <axis
       xyz="-1 0 0" />
     <limit
-      lower="0"
-      upper="0.09"
-      effort="20"
-      velocity="0.1" />
+      effort="7"
+      lower="-0.785398"
+      upper="0.785398"
+      velocity="20.943946" />
   </joint>
   <link
     name="L_link7">
@@ -903,6 +959,11 @@
       link="L_link7" />
     <axis
       xyz="0 -1 0" />
+    <limit
+      effort="7"
+      lower="-1.570796"
+      upper="1.570796"
+      velocity="20.943946" />
   </joint>
   <link
     name="gripper_LL_link">
@@ -948,17 +1009,17 @@
     name="gripper_LL_joint"
     type="prismatic">
     <origin
-      xyz="0 0.03075 -0.119"
+      xyz="0 -0.01425 -0.119"
       rpy="0 0 0" />
     <parent
       link="L_link7" />
     <child
       link="gripper_LL_link" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
-      lower="0"
-      upper="0.09"
+      lower="0.0"
+      upper="0.045"
       effort="20"
       velocity="0.1" />
   </joint>
@@ -1006,17 +1067,17 @@
     name="gripper_LR_joint"
     type="prismatic">
     <origin
-      xyz="0 -0.09425 -0.119"
+      xyz="0 -0.04925 -0.119"
       rpy="0 0 0" />
     <parent
       link="L_link7" />
     <child
       link="gripper_LR_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
-      lower="0"
-      upper="0.09"
+      lower="0.0"
+      upper="0.045"
       effort="20"
       velocity="0.1" />
   </joint>
@@ -1072,6 +1133,11 @@
       link="R_link1" />
     <axis
       xyz="0 -1 0" />
+    <limit
+      effort="40"
+      lower="-1.396263"
+      upper="3.490659"
+      velocity="16.754666" />
   </joint>
   <link
     name="R_link2">
@@ -1107,7 +1173,7 @@
   </link>
   <joint
     name="R_2_joint"
-    type="continuous">
+    type="revolute">
     <origin
       xyz="-0.0284000000012584 -0.065 0"
       rpy="0 0 0" />
@@ -1117,6 +1183,11 @@
       link="R_link2" />
     <axis
       xyz="1 0 0" />
+    <limit
+      effort="40"
+      lower="-3.3161253267948965"
+      upper="0.17453267320510335"
+      velocity="16.754666" />
   </joint>
   <link
     name="R_link3">
@@ -1170,6 +1241,11 @@
       link="R_link3" />
     <axis
       xyz="0 0 -1" />
+    <limit
+      effort="27"
+      lower="-1.570796"
+      upper="1.570796"
+      velocity="5.445426" />
   </joint>
   <link
     name="R_link4">
@@ -1223,6 +1299,11 @@
       link="R_link4" />
     <axis
       xyz="0 1 0" />
+    <limit
+      effort="27"
+      lower="-2.443461"
+      upper="0.0"
+      velocity="5.445426" />
   </joint>
   <link
     name="R_link5">
@@ -1276,6 +1357,11 @@
       link="R_link5" />
     <axis
       xyz="0 0 -1" />
+    <limit
+      effort="7"
+      lower="-1.570796"
+      upper="1.570796"
+      velocity="20.943946" />
   </joint>
   <link
     name="R_link6">
@@ -1330,10 +1416,10 @@
     <axis
       xyz="-1 0 0" />
     <limit
-      lower="0"
-      upper="0.09"
-      effort="20"
-      velocity="0.1" />
+      effort="7"
+      lower="-0.785398"
+      upper="0.785398"
+      velocity="20.943946" />
   </joint>
   <link
     name="R_link7">
@@ -1387,6 +1473,11 @@
       link="R_link7" />
     <axis
       xyz="0 -1 0" />
+    <limit
+      effort="7"
+      lower="-1.570796"
+      upper="1.570796"
+      velocity="20.943946" />
   </joint>
   <link
     name="gripper_RL_link">
@@ -1432,17 +1523,17 @@
     name="gripper_RL_joint"
     type="prismatic">
     <origin
-      xyz="0 0.09425 -0.119"
+      xyz="0 0.04925 -0.119"
       rpy="0 0 0" />
     <parent
       link="R_link7" />
     <child
       link="gripper_RL_link" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
-      lower="0"
-      upper="0.09"
+      lower="0.0"
+      upper="0.045"
       effort="20"
       velocity="0.1" />
   </joint>
@@ -1490,18 +1581,44 @@
     name="gripper_RR_joint"
     type="prismatic">
     <origin
-      xyz="0 -0.03075 -0.119"
+      xyz="0 0.01425 -0.119"
       rpy="0 0 0" />
     <parent
       link="R_link7" />
     <child
       link="gripper_RR_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
-      lower="0"
-      upper="0.09"
+      lower="0.0"
+      upper="0.045"
       effort="20"
       velocity="0.1" />
+  </joint>
+  <link
+    name="L_gripper_tcp_link" />
+  <joint
+    name="L_gripper_tcp_joint"
+    type="fixed">
+    <origin
+      xyz="0.000000 -0.031750 -0.189995"
+      rpy="0 0 0" />
+    <parent
+      link="L_link7" />
+    <child
+      link="L_gripper_tcp_link" />
+  </joint>
+  <link
+    name="R_gripper_tcp_link" />
+  <joint
+    name="R_gripper_tcp_joint"
+    type="fixed">
+    <origin
+      xyz="0.000000 0.031750 -0.189995"
+      rpy="0 0 0" />
+    <parent
+      link="R_link7" />
+    <child
+      link="R_gripper_tcp_link" />
   </joint>
 </robot>
