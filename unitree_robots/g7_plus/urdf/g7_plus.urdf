@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="g7_plus">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.01875138 -0.00606419 -0.01579597"
+        rpy="0 0 0" />
+      <mass
+        value="40.00000000" />
+      <inertia
+        ixx="1.61009342"
+        ixy="0.05709942"
+        ixz="-0.06427429"
+        iyy="2.22463124"
+        iyz="-0.01190124"
+        izz="2.69835458" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.047" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.57 0.46 0.25"/> </geometry>
+    </collision>
+  </link>
+  <link
+    name="imu_link">
+    <inertial>
+      <origin
+        xyz="0.00063637 -0.00000167 -0.00108503"
+        rpy="0 0 0" />
+      <mass
+        value="0.01000000" />
+      <inertia
+        ixx="0.00000106"
+        ixy="-0.0000001"
+        ixz="-0.00000005"
+        iyy="0.00000084"
+        iyz="-0.0000001"
+        izz="0.00000160" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/IMU_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!--
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/IMU_link.STL" />
+      </geometry>
+    </collision>
+    -->
+  </link>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="0.22053 0 -0.02073"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_F_link">
+    <inertial>
+      <origin
+        xyz="0.00000000 0.00000000 -0.00275000"
+        rpy="0 0 0" />
+      <mass
+        value="0.00100000" />
+      <inertia
+        ixx="0.00000038"
+        ixy="-0.0000001"
+        ixz="-0.0000001"
+        iyy="0.00000038"
+        iyz="-0.0000001"
+        izz="0.00000055" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/lidar_F_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!--
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/lidar_F_link.STL" />
+      </geometry>
+    </collision>
+    -->
+  </link>
+  <joint
+    name="lidar_F_joint"
+    type="fixed">
+    <origin
+      xyz="0.199 0.15 0.031025"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_F_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_R_link">
+    <inertial>
+      <origin
+        xyz="0.00006023 0.00006065 -0.00275000"
+        rpy="0 0 0" />
+      <mass
+        value="0.00100000" />
+      <inertia
+        ixx="0.00000038"
+        ixy="-0.0000001"
+        ixz="-0.0000001"
+        iyy="0.00000038"
+        iyz="-0.0000001"
+        izz="0.00000055" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/lidar_R_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!--
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/lidar_R_link.STL" />
+      </geometry>
+    </collision>
+    -->
+  </link>
+  <joint
+    name="lidar_R_joint"
+    type="fixed">
+    <origin
+      xyz="-0.199 -0.15 0.031025"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_R_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="FL_link">
+    <inertial>
+      <origin
+        xyz="0.00000000 0.00090957 -0.03543680"
+        rpy="0 0 0" />
+      <mass
+        value="0.30000000" />
+      <inertia
+        ixx="0.00042767"
+        ixy="-0.0000001"
+        ixz="-0.00000031"
+        iyy="0.00036712"
+        iyz="0.00000393"
+        izz="0.00024742" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/FL_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!--
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/FL_link.STL" />
+      </geometry>
+    </collision>
+    -->
+  </link>
+  <joint
+    name="FL_steering_joint"
+    type="revolute">
+    <origin
+      xyz="0.187 0.135 -0.08273"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FL_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="20"
+      velocity="10" />
+  </joint>
+  <link
+    name="FLW_link">
+    <inertial>
+      <origin
+        xyz="0.00000000 0.00000000 0.00000000"
+        rpy="0 0 0" />
+      <mass
+        value="1.00000000" />
+      <inertia
+        ixx="0.00121743"
+        ixy="-0.0000001"
+        ixz="-0.0000001"
+        iyy="0.00221509"
+        iyz="-0.0000001"
+        izz="0.00121739" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/FLW_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.0525" length="0.04"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.063"
+      rpy="0 0 0" />
+    <parent
+      link="FL_link" />
+    <child
+      link="FLW_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="20"
+      velocity="10" />
+  </joint>
+  <link
+    name="FR_link">
+    <inertial>
+      <origin
+        xyz="0.00000000 -0.00090971 -0.03543678"
+        rpy="0 0 0" />
+      <mass
+        value="0.30000000" />
+      <inertia
+        ixx="0.00042766"
+        ixy="-0.0000001"
+        ixz="0.00000031"
+        iyy="0.00036712"
+        iyz="-0.00000393"
+        izz="0.00024742" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/FR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!--
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/FR_link.STL" />
+      </geometry>
+    </collision>
+    -->
+  </link>
+  <joint
+    name="FR_steering_joint"
+    type="revolute">
+    <origin
+      xyz="0.187 -0.135 -0.08273"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FR_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="20"
+      velocity="10" />
+  </joint>
+  <link
+    name="FRW_link">
+    <inertial>
+      <origin
+        xyz="0.00000000 0.00000000 0.00000000"
+        rpy="0 0 0" />
+      <mass
+        value="1.00000000" />
+      <inertia
+        ixx="0.00121743"
+        ixy="-0.0000001"
+        ixz="-0.0000001"
+        iyy="0.00221511"
+        iyz="-0.0000001"
+        izz="0.00121742" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/FRW_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.0525" length="0.04"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.063"
+      rpy="0 0 0" />
+    <parent
+      link="FR_link" />
+    <child
+      link="FRW_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="20"
+      velocity="10" />
+  </joint>
+  <link
+    name="RL_link">
+    <inertial>
+      <origin
+        xyz="0.00000000 0.00090952 -0.03543679"
+        rpy="0 0 0" />
+      <mass
+        value="0.30000000" />
+      <inertia
+        ixx="0.00042767"
+        ixy="-0.0000001"
+        ixz="-0.00000031"
+        iyy="0.00036712"
+        iyz="0.00000393"
+        izz="0.00024742" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/RL_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!--
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/RL_link.STL" />
+      </geometry>
+    </collision>
+    -->
+  </link>
+  <joint
+    name="RL_steering_joint"
+    type="revolute">
+    <origin
+      xyz="-0.189 0.135 -0.08273"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RL_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="20"
+      velocity="10" />
+  </joint>
+  <link
+    name="RLW_link">
+    <inertial>
+      <origin
+        xyz="0.00000000 0.00000000 0.00000000"
+        rpy="0 0 0" />
+      <mass
+        value="1.00000000" />
+      <inertia
+        ixx="0.00121743"
+        ixy="-0.0000001"
+        ixz="-0.0000001"
+        iyy="0.00221509"
+        iyz="-0.0000001"
+        izz="0.00121739" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/RLW_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.0525" length="0.04"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.063"
+      rpy="0 0 0" />
+    <parent
+      link="RL_link" />
+    <child
+      link="RLW_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="20"
+      velocity="10" />
+  </joint>
+  <link
+    name="RR_link">
+    <inertial>
+      <origin
+        xyz="0.00000000 -0.00090972 -0.03543679"
+        rpy="0 0 0" />
+      <mass
+        value="0.30000000" />
+      <inertia
+        ixx="0.00042766"
+        ixy="-0.0000001"
+        ixz="0.00000031"
+        iyy="0.00036712"
+        iyz="-0.00000393"
+        izz="0.00024742" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/RR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!--
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/RR_link.STL" />
+      </geometry>
+    </collision>
+    -->
+  </link>
+  <joint
+    name="RR_steering_joint"
+    type="revolute">
+    <origin
+      xyz="-0.189 -0.135 -0.08273"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RR_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="20"
+      velocity="10" />
+  </joint>
+  <link
+    name="RRW_link">
+    <inertial>
+      <origin
+        xyz="0.00000000 0.00000000 0.00000000"
+        rpy="0 0 0" />
+      <mass
+        value="1.00000000" />
+      <inertia
+        ixx="0.00121743"
+        ixy="-0.0000001"
+        ixz="-0.0000001"
+        iyy="0.00221511"
+        iyz="-0.0000001"
+        izz="0.00121742" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://G7_plus/meshes/RRW_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.0525" length="0.04"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.063"
+      rpy="0 0 0" />
+    <parent
+      link="RR_link" />
+    <child
+      link="RRW_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="20"
+      velocity="10" />
+  </joint>
+</robot>
