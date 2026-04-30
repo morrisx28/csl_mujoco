@@ -304,7 +304,7 @@
   </link>
   <joint
     name="FL_wheel_joint"
-    type="revolute">
+    type="continuous">
     <origin
       xyz="0 0 -0.063"
       rpy="0 0 0" />
@@ -314,11 +314,6 @@
       link="FLW_link" />
     <axis
       xyz="0 1 0" />
-    <limit
-      lower="-3.14159"
-      upper="3.14159"
-      effort="20"
-      velocity="10" />
   </joint>
   <link
     name="FR_link">
@@ -419,7 +414,7 @@
   </link>
   <joint
     name="FR_wheel_joint"
-    type="revolute">
+    type="continuous">
     <origin
       xyz="0 0 -0.063"
       rpy="0 0 0" />
@@ -429,11 +424,6 @@
       link="FRW_link" />
     <axis
       xyz="0 1 0" />
-    <limit
-      lower="-3.14159"
-      upper="3.14159"
-      effort="20"
-      velocity="10" />
   </joint>
   <link
     name="RL_link">
@@ -534,7 +524,7 @@
   </link>
   <joint
     name="RL_wheel_joint"
-    type="revolute">
+    type="continuous">
     <origin
       xyz="0 0 -0.063"
       rpy="0 0 0" />
@@ -544,11 +534,6 @@
       link="RLW_link" />
     <axis
       xyz="0 1 0" />
-    <limit
-      lower="-3.14159"
-      upper="3.14159"
-      effort="20"
-      velocity="10" />
   </joint>
   <link
     name="RR_link">
@@ -649,7 +634,7 @@
   </link>
   <joint
     name="RR_wheel_joint"
-    type="revolute">
+    type="continuous">
     <origin
       xyz="0 0 -0.063"
       rpy="0 0 0" />
@@ -659,10 +644,5 @@
       link="RRW_link" />
     <axis
       xyz="0 1 0" />
-    <limit
-      lower="-3.14159"
-      upper="3.14159"
-      effort="20"
-      velocity="10" />
   </joint>
 </robot>
