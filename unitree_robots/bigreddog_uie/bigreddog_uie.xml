@@ -55,7 +55,7 @@
   <worldbody>
     <body name="base_link" pos="0 0 0.6" childclass="bigreddog_uie">
       <inertial pos="-0.02594078 0.00017041 0.02153795" quat="1 0 0 0" mass="5.2" diaginertia="0.03784813 0.10658838 0.11380621" />
-      <!-- <freejoint /> -->
+      <freejoint />
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="base_link" class="visual"/>
       <geom size="0.208 0.121 0.0635" type="box" class="collision"/>
       <site name="imu" pos="0 0 0" />
