@@ -210,12 +210,6 @@
         <cylinder radius="0.015" length="0.145"/>
       </geometry>
     </collision>
-    <collision>
-      <origin xyz="0 -0.0085 -0.20474" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.02"/>
-      </geometry>
-    </collision>
   </link>
   <joint
     name="FL_calf_joint"
@@ -421,12 +415,6 @@
       <origin xyz="0.02919 0.006 -0.1197" rpy="0 0.349 0"/>
       <geometry>
         <cylinder radius="0.015" length="0.145"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0 0.0085 -0.20474" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.02"/>
       </geometry>
     </collision>
   </link>
@@ -636,12 +624,6 @@
         <cylinder radius="0.015" length="0.145"/>
       </geometry>
     </collision>
-    <collision>
-      <origin xyz="-0 -0.0085 -0.20474" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.02"/>
-      </geometry>
-    </collision>
   </link>
   <joint
     name="RL_calf_joint"
@@ -847,12 +829,6 @@
       <origin xyz="-0.02919 0.006 -0.1197" rpy="0 -0.349 0"/>
       <geometry>
         <cylinder radius="0.015" length="0.145"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0 0.0085 -0.20474" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.02"/>
       </geometry>
     </collision>
   </link>
@@ -1413,5 +1389,18 @@
       link="S0_f2_link" />
     <axis
       xyz="0 0 0" />
+  </joint>
+  <link name="S0_ee_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-8" ixy="0" ixz="0" iyy="1e-8" iyz="0" izz="1e-8" />
+    </inertial>
+  </link>
+  <joint name="S0_ee_joint" type="fixed" dont_collapse="true">
+    <origin xyz="0 -0.1085 0" rpy="0 0 -1.5708" />
+    <parent link="S0_link6" />
+    <child link="S0_ee_link" />
+    <axis xyz="0 0 0" />
   </joint>
 </robot>

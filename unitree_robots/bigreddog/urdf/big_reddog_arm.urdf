@@ -1585,20 +1585,17 @@
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0.025" rpy="0 0 0"/>
       <geometry>
-        <mesh
-          filename="../meshes/S0_base_link_collision.STL" />
+        <cylinder radius="0.045" length="0.04"/>
       </geometry>
-    </collision>
+    </collision>   
   </link>
   <joint
-    name="S0_base_link_joint"
+    name="S0_base_joint"
     type="fixed">
     <origin
-      xyz="0 0.000216697742987104 0"
+      xyz="0 0.000216697742987104 0.0625"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -1638,12 +1635,9 @@
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0 0.045" rpy="0 0 0"/>
       <geometry>
-        <mesh
-          filename="../meshes/S0_link1_collision.STL" />
+        <cylinder radius="0.03" length="0.09"/>
       </geometry>
     </collision>
   </link>
@@ -1659,11 +1653,11 @@
       link="S0_link1" />
     <axis
       xyz="0 0 1" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="147.0"
-      velocity="6.28" />
+    <limit 
+      effort="28.0" 
+      lower="-6.283185307179586" 
+      upper="6.283185307179586" 
+      velocity="3.141592653589793"/>
   </joint>
   <link
     name="S0_link2">
@@ -1696,12 +1690,21 @@
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 -0.045 0" rpy="1.5708 0 0"/>
       <geometry>
-        <mesh
-          filename="../meshes/S0_link2_collision.STL" />
+        <cylinder radius="0.03" length="0.09"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.095 -0.045 0" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder radius="0.025" length="0.19"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.185 -0.04 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.0224" length="0.08"/>
       </geometry>
     </collision>
   </link>
@@ -1717,11 +1720,11 @@
       link="S0_link2" />
     <axis
       xyz="0 1 0" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="147.0"
-      velocity="6.28" />
+    <limit 
+      effort="28.0" 
+      lower="-6.283185307179586" 
+      upper="6.283185307179586" 
+      velocity="3.141592653589793"/>
   </joint>
   <link
     name="S0_link3">
@@ -1754,12 +1757,21 @@
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="-0.0426 0.03 0" rpy="0 1.5708 0"/>
       <geometry>
-        <mesh
-          filename="../meshes/S0_link3_collision.STL" />
+        <cylinder radius="0.025" length="0.085"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0.0075 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.0225" length="0.015"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.108 0.038 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.023" length="0.0885"/>
       </geometry>
     </collision>
   </link>
@@ -1775,11 +1787,11 @@
       link="S0_link3" />
     <axis
       xyz="0 1 0" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="147.0"
-      velocity="6.28" />
+    <limit 
+      effort="28.0" 
+      lower="-6.283185307179586" 
+      upper="6.283185307179586" 
+      velocity="3.141592653589793"/>
   </joint>
   <link
     name="S0_link4">
@@ -1812,12 +1824,9 @@
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 0.023 0.005" rpy="0 0 0"/>
       <geometry>
-        <mesh
-          filename="../meshes/S0_link4_collision.STL" />
+        <cylinder radius="0.023" length="0.084"/>
       </geometry>
     </collision>
   </link>
@@ -1833,11 +1842,11 @@
       link="S0_link4" />
     <axis
       xyz="0 1 0" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="147.0"
-      velocity="6.28" />
+    <limit 
+      effort="28.0" 
+      lower="-6.283185307179586" 
+      upper="6.283185307179586" 
+      velocity="3.141592653589793"/>
   </joint>
   <link
     name="S0_link5">
@@ -1870,12 +1879,9 @@
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 -0.008 0.028" rpy="1.5708 0 0"/>
       <geometry>
-        <mesh
-          filename="../meshes/S0_link5_collision.STL" />
+        <cylinder radius="0.023" length="0.086"/>
       </geometry>
     </collision>
   </link>
@@ -1891,11 +1897,11 @@
       link="S0_link5" />
     <axis
       xyz="0 0 1" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="147.0"
-      velocity="6.28" />
+    <limit 
+      effort="28.0" 
+      lower="-6.283185307179586" 
+      upper="6.283185307179586" 
+      velocity="3.141592653589793"/>
   </joint>
   <link
     name="S0_link6">
@@ -1928,12 +1934,15 @@
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 -0.006 0" rpy="1.5708 0 0"/>
       <geometry>
-        <mesh
-          filename="../meshes/S0_link6_collision.STL" />
+        <cylinder radius="0.023" length="0.012"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 -0.048 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.026 0.072 0.018"/>
       </geometry>
     </collision>
   </link>
@@ -1949,11 +1958,11 @@
       link="S0_link6" />
     <axis
       xyz="0 1 0" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="147.0"
-      velocity="6.28" />
+    <limit 
+      effort="28.0" 
+      lower="-6.283185307179586" 
+      upper="6.283185307179586" 
+      velocity="3.141592653589793"/>
   </joint>
   <link
     name="S0_f1_link">
@@ -1986,12 +1995,9 @@
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 -0.0195 0" rpy="0 0 0"/>
       <geometry>
-        <mesh
-          filename="../meshes/S0_f1_collision.STL" />
+        <box size="0.00782 0.039 0.01"/>
       </geometry>
     </collision>
   </link>
@@ -2039,12 +2045,9 @@
       </material>
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+      <origin xyz="0 -0.0195 0" rpy="0 0 0"/>
       <geometry>
-        <mesh
-          filename="../meshes/S0_f2_collision.STL" />
+        <box size="0.00782 0.039 0.01"/>
       </geometry>
     </collision>
   </link>
@@ -2060,5 +2063,18 @@
       link="S0_f2_link" />
     <axis
       xyz="0 0 0" />
+  </joint>
+  <link name="S0_ee_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-8" ixy="0" ixz="0" iyy="1e-8" iyz="0" izz="1e-8" />
+    </inertial>
+  </link>
+  <joint name="S0_ee_joint" type="fixed" dont_collapse="true">
+    <origin xyz="0 -0.1085 0" rpy="0 0 -1.5708" />
+    <parent link="S0_link6" />
+    <child link="S0_ee_link" />
+    <axis xyz="0 0 0" />
   </joint>
 </robot>
