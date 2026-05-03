@@ -210,12 +210,6 @@
         <cylinder radius="0.015" length="0.145"/>
       </geometry>
     </collision>
-    <collision>
-      <origin xyz="0 -0.0085 -0.20474" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.02"/>
-      </geometry>
-    </collision>
   </link>
   <joint
     name="FL_calf_joint"
@@ -421,12 +415,6 @@
       <origin xyz="0.02919 0.006 -0.1197" rpy="0 0.349 0"/>
       <geometry>
         <cylinder radius="0.015" length="0.145"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0 0.0085 -0.20474" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.02"/>
       </geometry>
     </collision>
   </link>
@@ -636,12 +624,6 @@
         <cylinder radius="0.015" length="0.145"/>
       </geometry>
     </collision>
-    <collision>
-      <origin xyz="-0 -0.0085 -0.20474" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.02"/>
-      </geometry>
-    </collision>
   </link>
   <joint
     name="RL_calf_joint"
@@ -847,12 +829,6 @@
       <origin xyz="-0.02919 0.006 -0.1197" rpy="0 -0.349 0"/>
       <geometry>
         <cylinder radius="0.015" length="0.145"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0 0.0085 -0.20474" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.02"/>
       </geometry>
     </collision>
   </link>
