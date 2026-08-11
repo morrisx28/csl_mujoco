@@ -1,0 +1,44 @@
+<mujoco model="bigreddog_plus_scene">
+  <include file="bigreddog_plus.xml"/>
+
+  <statistic center="0 0 0.25" extent="1.2"/>
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global azimuth="90" elevation="-10"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0"
+             width="512" height="3072"/>
+    <!-- Matches the training scene's groundplane texture/material. -->
+    <texture name="groundplane" type="2d" builtin="checker" mark="edge"
+             rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8"
+             width="300" height="300"/>
+    <material name="groundplane" texture="groundplane" texuniform="true"
+              texrepeat="4 4" reflectance="0.2"/>
+  </asset>
+
+  <worldbody>
+    <light name="sun" mode="fixed" directional="true" castshadow="true"
+           pos="0 0 1.5" dir="0 0 -1"/>
+    <!-- Named `terrain` like the training ground plane. The feet carry
+         priority 1 with friction 0.6, so they set the contact friction. -->
+    <geom name="terrain" type="plane" size="0 0 0.05" material="groundplane"
+          condim="3" friction="0.6"/>
+  </worldbody>
+
+  <keyframe>
+    <!-- mj_resetDataKeyframe(model, data, 0) starts every run here. Base height
+         and joint angles are the training init_state / the ONNX
+         default_joint_pos, in FL,FR,RL,RR x hip,thigh,calf order. -->
+    <key name="home"
+         qpos="0 0 0.5
+               1 0 0 0
+               -0.125 0.6 -1.0
+                0.125 0.6 -1.0
+               -0.125 -0.6 1.0
+                0.125 -0.6 1.0"/>
+  </keyframe>
+</mujoco>

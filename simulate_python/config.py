@@ -1,4 +1,4 @@
-ROBOT = "g7_openarm" # Robot name, "go2", "b2", "b2w", "h1", "go2w", "g1" , g7_arm_wheelchair
+ROBOT = "bigreddog_plus" # Robot name, "go2", "b2", "b2w", "h1", "go2w", "g1" , g7_arm_wheelchair
 ROBOT_SCENE = "../unitree_robots/" + ROBOT + "/scene.xml" # Robot scene
 DOMAIN_ID = 1 # Domain id
 INTERFACE = "lo" # Interface 
